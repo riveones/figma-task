@@ -1,0 +1,14 @@
+{
+  "name": "sweed-design",
+  "owner": {
+    "name": "Sweed design team"
+  },
+  "description": "Claude Code mods of the Sweed design team.",
+  "plugins": [
+    {
+      "name": "figma-task",
+      "source": "./plugins/figma-task",
+      "description": "Sets up a task page in the quarterly Figma file: template copy, Jira widgets, flow boards and a re-checked For dev mapping."
+    }
+  ]
+}

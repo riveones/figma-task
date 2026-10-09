@@ -1,0 +1,66 @@
+{
+  "name": "figma-task",
+  "version": "0.3.0",
+  "author": {
+    "name": "Sweed design team"
+  },
+  "description": "Sets up a task page in the quarterly Figma file: template copy, Jira widgets, flow boards from prototype screenshots, and a re-checked For dev mapping.",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "designerEmoji": {
+      "type": "string",
+      "title": "Designer emoji",
+      "description": "Your own, in front of every page name — any one no page in the file starts with yet. The mod asks on the first task and saves it here",
+      "default": ""
+    },
+    "portalFileKey": {
+      "type": "string",
+      "title": "Portal quarterly Figma file (fileKey)",
+      "description": "The current Portal quarter file (named like \"Portal 2026 – Q4\", in the Figma project \"Product task\"). Leave empty: the mod asks on the first task and saves it here",
+      "default": ""
+    },
+    "ecomFileKey": {
+      "type": "string",
+      "title": "Ecom Figma file (fileKey)",
+      "description": "The current Ecom file (named like \"Ecomm (3/26)\"). Leave empty: the mod asks on the first Ecom task and saves it here",
+      "default": ""
+    },
+    "extraFileKeys": {
+      "type": "string",
+      "title": "Earlier Figma files",
+      "description": "fileKeys of earlier quarterly files, comma-separated — comments and re-uploads keep working there after the quarter changes. set_figma_file adds the replaced file here itself",
+      "default": ""
+    },
+    "figmaServer": {
+      "type": "string",
+      "title": "Figma MCP server name",
+      "description": "The cloud Figma MCP as /mcp lists it",
+      "default": "figma-remote"
+    },
+    "portalRepoPath": {
+      "type": "string",
+      "title": "web-ui-portal-ci checkout",
+      "description": "Leave empty: the mod finds a Portal clone itself (by its git remote, preferring one with node_modules). Set it only to use another clone",
+      "default": ""
+    },
+    "webUiShopPath": {
+      "type": "string",
+      "title": "sd/web-ui-shop checkout",
+      "description": "Leave empty: the mod finds a web-ui-shop clone itself (by its git remote). Set it only to use another clone",
+      "default": ""
+    },
+    "figmaToken": {
+      "type": "string",
+      "title": "Figma personal access token",
+      "description": "For /figma-comments: Figma → Settings → Security → Personal access tokens, scopes File comments read + write. Only the mod reads it; the model never sees it",
+      "sensitive": true,
+      "default": ""
+    },
+    "chromiumPath": {
+      "type": "string",
+      "title": "Chromium for Playwright",
+      "description": "Optional: an installed chrome-headless-shell, when the repo's Playwright wants another revision",
+      "default": ""
+    }
+  }
+}

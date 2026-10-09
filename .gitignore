@@ -1,0 +1,3 @@
+node_modules/
+plugins/figma-task/.claude-plugin/types/
+.DS_Store
